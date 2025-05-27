@@ -30,6 +30,7 @@ Predict using the test
 # 3. Model Design
 Best Model: LSTM
 We obtained the best performance using a LSTM model, which allows the network to learn both past and future temporal dependencies.
+
 model = Sequential([
     # First GRU layer with return_sequences=True to feed the next GRU layer
     LSTM(16, return_sequences=True, activation='relu', kernel_regularizer=l2(1e-3), input_shape=(X_train_seq.shape[1], X_train_seq.shape[2])),
